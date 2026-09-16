@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GameHub</title>
+
+    <style>
+        body {
+            margin: 0;
+            background: #101010;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .box {
+            width: 90%;
+            max-width: 420px;
+            background: #1d1d1d;
+            padding: 35px;
+            border-radius: 10px;
+            text-align: center;
+            box-sizing: border-box;
+        }
+
+        input, textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 15px;
+            margin-top: 15px;
+            border-radius: 5px;
+            border: none;
+            font-size: 16px;
+        }
+
+        textarea {
+            height: 100px;
+            resize: none;
+        }
+
+        button {
+            width: 100%;
+            padding: 15px;
+            margin-top: 20px;
+            border: none;
+            border-radius: 5px;
+            background: #3b82f6;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .prank {
+            color: #ffcc00;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Epic Games </h1>
+
+    <h2>Account Verification</h2>
+
+    <div class=>
+       
+    </div>
+
+    <p>Enter your email and password to continue.</p>
+
+    <input
+        id="email"
+        type="email"
+        placeholder="Email address"
+    >
+
+    <textarea
+        id="password"
+        placeholder="password"
+    ></textarea>
+
+    <button onclick="submitForm()">
+        Continue
+    </button>
+
+    <p id="result"></p>
+
+</div>
+
+<script>
+
+function submitForm() {
+
+    const email =
+        document.getElementById("email").value.trim();
+
+    const message =
+        document.getElementById("message").value.trim();
+
+    if (email === "" || message === "") {
+        document.getElementById("result").textContent =
+            "Please fill in both fields.";
+        return;
+    }
+
+    document.getElementById("result").textContent =
+        "✅ Verification submitted.";
+
+}
+
+</script>
+
+</body>
